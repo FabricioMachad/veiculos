@@ -1,11 +1,11 @@
 <?php
 try {
-    $pdo = new PDO('mysql:host=localhost', 'root', '1234');
+    $pdo = new PDO('mysql:host=localhost', 'root', '');
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $pdo->exec("CREATE DATABASE IF NOT EXISTS veiculos_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
 
-    $pdo = new PDO('mysql:host=localhost;dbname=veiculos_db', 'root', '1234');
+    $pdo = new PDO('mysql:host=localhost;dbname=veiculos_db', 'root', '');
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $pdo->exec("CREATE TABLE IF NOT EXISTS categorias (
